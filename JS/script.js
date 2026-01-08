@@ -20,10 +20,20 @@ axios.get(endpoint)
 
             //andiamo a destrutturare l'oggetto
             const {title, date, url} = card;
-            console.log(title,date,url);
-            
-            
+
+            //andiamo a generare il contenuto nella nostra variabile di accumolo
+            cardsOutput += `<div class="card">
+                                <div class="card-pin">
+                                    <img class="card-pin-img" src="../img/pin.svg" alt="pin">
+                                 </div>
+                                <div class="card-img-container">
+                                <img class="card-img" src="${url}" alt="Card Image">
+                                </div>
+                                <div class="card-title">${title}</div>
+                                <div class="card-date">${date}</div>
+                                </div>`  
         });
 
-        
+        //Andiamo a innestare nell'HTML quello che abbiamo generato
+        containerOutput.innerHTML = cardsOutput;        
     })
