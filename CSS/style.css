@@ -81,10 +81,6 @@ header {
 
 @media screen and (max-width:955px) {
 
-     .header-title{
-        font-size: 5rem;
-    }
-
     #container {
         width: 80%;
     }
