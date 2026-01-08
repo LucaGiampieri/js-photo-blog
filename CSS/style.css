@@ -20,8 +20,9 @@ header {
 .header-title {
     text-align: center;
     padding: 1rem;
-    font-size: 5rem;
-    font-family: 'Sometype Mono', monospace;
+    font-size: 6rem;
+    font-weight: 900;
+    font-family: 'Edu TAS Beginner', sans-serif;
 }
 
 /* Main */
@@ -80,26 +81,33 @@ header {
 
 @media screen and (max-width:955px) {
 
-    #container{
+     .header-title{
+        font-size: 5rem;
+    }
+
+    #container {
         width: 80%;
     }
 
-   .card{
-    flex-basis: calc((100% - 2rem) / 2);
-   }
+    .card {
+        flex-basis: calc((100% - 2rem) / 2);
+    }
 
 }
 
 /* Smartphone */
 
 @media screen and (max-width:480px) {
+    .header-title{
+        font-size: 4rem;
+    }
 
-    #container{
+    #container {
         width: 70%;
     }
 
-   .card{
-    flex-basis: 100%;
-   }
+    .card {
+        flex-basis: 100%;
+    }
 
 }
