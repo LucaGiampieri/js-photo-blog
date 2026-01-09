@@ -11,6 +11,10 @@ body {
     background-image: url(../img/cork.png);
 }
 
+.display-none {
+    display: none;
+}
+
 /* Header */
 
 header {
@@ -19,7 +23,7 @@ header {
 
 .header-title {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
     font-size: 6rem;
     font-weight: 900;
     font-family: 'Edu TAS Beginner', sans-serif;
@@ -75,6 +79,44 @@ header {
     padding-bottom: 1rem;
 }
 
+/* Overlay */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.overlay-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.overlay-button-container {
+    text-align: center;
+}
+
+#overlay-button {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#overlay-img {
+    width: 600px;
+    height: 600px;
+}
+
+
+
 /* Responsive */
 
 /* Tablet */
@@ -89,12 +131,16 @@ header {
         flex-basis: calc((100% - 2rem) / 2);
     }
 
+    #overlay-img {
+        width: 400px;
+        height: 400px;
+    }
 }
 
 /* Smartphone */
 
 @media screen and (max-width:480px) {
-    .header-title{
+    .header-title {
         font-size: 4rem;
     }
 
@@ -105,5 +151,4 @@ header {
     .card {
         flex-basis: 100%;
     }
-
 }

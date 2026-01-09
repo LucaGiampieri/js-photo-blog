@@ -34,15 +34,15 @@ axios.get(endpoint)
 
 function cardGenerator(titleFunction, dateFunction, urlFunction) {
     return `<div class="card">
-                    <div class="card-pin">
-                        <img class="card-pin-img" src="../img/pin.svg" alt="pin">
-                    </div>
-                    <div class="card-img-container">
-                        <img class="card-img" src="${urlFunction}" alt="Card Image">
-                    </div>
-                    <div class="card-title">${titleFunction}</div>
-                    <div class="card-date">${dateFunction}</div>
-                    </div>` 
+                <div class="card-pin">
+                    <img class="card-pin-img" src="../img/pin.svg" alt="pin">
+                </div>
+                <div class="card-img-container">
+                    <img class="card-img" src="${urlFunction}" alt="${titleFunction} Image">
+                </div>
+                <div class="card-title">${titleFunction}</div>
+                <div class="card-date">${dateFunction}</div>
+            </div>` 
 
 }
   
