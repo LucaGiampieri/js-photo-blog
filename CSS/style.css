@@ -36,7 +36,7 @@ header {
     flex-wrap: wrap;
     width: 60%;
     margin: 0 auto;
-    gap: 2rem;
+    gap: 1rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
 }
@@ -47,13 +47,13 @@ header {
     padding: 0 1rem;
     background-color: white;
     margin-top: 2rem;
-    flex-basis: calc((100% - 4rem) / 3);
+    flex-basis: calc((100% - 2rem) / 3);
     transition: 0.3s;
 }
 
 .card:hover {
     cursor: pointer;
-    transform: rotate(15deg);
+    transform: rotate(10deg);
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
 }
 
@@ -148,7 +148,7 @@ header {
     }
 
     .card {
-        flex-basis: calc((100% - 2rem) / 2);
+        flex-basis: calc((100% - 1rem) / 2);
     }
 
     #overlay-img {
