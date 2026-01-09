@@ -5,7 +5,6 @@ const containerOutput = document.getElementById("container");
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
 
 //Andiamo a creare una chiamta AJAX che riprenda il nostro endpoint
-
 axios.get(endpoint)
     .then(response => {
 
@@ -27,13 +26,34 @@ axios.get(endpoint)
 
         //Andiamo a innestare nell'HTML quello che abbiamo generato
         containerOutput.innerHTML = cardsOutput;
-    })
+
+        //andiamo a selezionare le nostre card
+        const cardInput = document.querySelectorAll(".card");
+
+        //andiamo a selezionare l'overlay e il button
+        const overlay = document.getElementById("overlay");
+        const buttonInput = document.getElementById("overlay-button");
+
+        //andiamo a creare l'evento che al click faccia ricomparire l'overlay
+        cardInput.forEach(card => {
+            card.addEventListener("click", () => {
+                overlay.classList.remove("display-none");
+            });
+        });
+
+        //andiamo a fare in modo che premendo sul bottone "chiudi" l'overlay scompaia
+        buttonInput.addEventListener("click", () =>{
+            overlay.classList.add("display-none");
+        })
+      
+
+        })
 
 
-//FUNCTION
+        //FUNCTION
 
-function cardGenerator(titleFunction, dateFunction, urlFunction) {
-    return `<div class="card">
+        function cardGenerator(titleFunction, dateFunction, urlFunction) {
+            return `<div class="card">
                 <div class="card-pin">
                     <img class="card-pin-img" src="../img/pin.svg" alt="pin">
                 </div>
@@ -42,7 +62,6 @@ function cardGenerator(titleFunction, dateFunction, urlFunction) {
                 </div>
                 <div class="card-title">${titleFunction}</div>
                 <div class="card-date">${dateFunction}</div>
-            </div>` 
+            </div>`
 
-}
-  
+        }
